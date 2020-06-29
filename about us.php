@@ -74,7 +74,11 @@ body {
 <div class="content">
   <h1>About Us</h1>
   <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" /></a>
-  <p> We are a pair of students (Yong Xuan & Patricia) from NUS School of Computing and this website is part of <br>Orbital 2020, a 1st year summer self-directed and independent work course.<br><br>
+  <p>Welcome to Shopkeepers, the one-stop website to keep all your online purchases history!<br><br>
+	How to use the website with 3 simple steps:<br><br>
+1. Create an account with us<br>
+2. Input your online order and its estimated delivery date<br>
+3. Check the delivered checkbox once your item has been delivered!<br><br>
 
   You may contact us at our email <a href="shopkeepers2020@gmail.com">here</a> should you have any queries.<br><br> </p>
 </div>
