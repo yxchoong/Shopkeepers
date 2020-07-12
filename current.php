@@ -152,13 +152,23 @@ tr:nth-child(even) {
 
 
 <?php
+
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+
 $conn = mysqli_connect("localhost", "root", "", "new order");
 // Check connection
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT name, website, delivery FROM new";
+$sql = "SELECT name, website, delivery FROM new WHERE username = '".$_SESSION["username"]."'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
