@@ -184,12 +184,12 @@ if(isset($_POST['but_delete'])){
 
 
 mysqli_query($conn, $delete);
- 
+
 
 }
 }
 
-$sql = "SELECT name, website, delivery FROM old WHERE username = '".$_SESSION["username"]."'";
+$sql = "SELECT name, website, delivery FROM old WHERE username = '".$_SESSION["username"]."' ORDER BY delivery";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row

@@ -140,13 +140,14 @@ tr:nth-child(even) {
 <form action="past.php" method="post">
   <table style="float: center">
    <tr>
-      <th colspan="4">Current Orders</th>
+      <th colspan="5">Current Orders</th>
     </tr>
     <tr>
       <th>Name of Item</th>
       <th>Website/Application</th>
       <th>Delivery Date</th>
       <th>Delivered?</th>
+      <th> </th>
 
 </div>
 
@@ -168,14 +169,22 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT name, website, delivery FROM new WHERE username = '".$_SESSION["username"]."'";
+$sql = "SELECT name, website, delivery FROM new WHERE username = '".$_SESSION["username"]."' ORDER BY delivery";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
-echo "<tr><td>" . $row["name"]. "</td><td>" . $row["website"] . "</td><td>"
-. $row["delivery"]. "</td><td>" ."<input type='checkbox' name='delete[]' value='".$row['name']."'</td></tr>";
-}
+  ?>
+  <tr>
+  <td><?php echo $row["name"]; ?> </td>
+  <td><?php echo $row["website"]; ?> </td>
+  <td><?php echo $row["delivery"]; ?> </td>
+  <td><input type='checkbox' name='delete[]' value=<?php echo $row['name']; ?>> </td>
+  <td> <a href="delete.php?id=<?php echo $row['name']; ?>">Delete</a></td>
+  </tr>
+<?php
+  }
+
 echo "</table>";
 } else { echo "No Current Orders"; }
 $conn->close();
