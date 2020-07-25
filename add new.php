@@ -8,7 +8,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
 </head>
 
 <style>
@@ -121,7 +122,7 @@ input[type=text] {
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
-  background-color: #FED8F9;
+  background-color: FC94AF;
   color: black;
 }
 
@@ -146,13 +147,26 @@ input[type=text] {
 
 
 <div class="content">
-  <h2>Add New Order</h2>
-  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:250px;height:250px" /></a>
-
+  <h2><p style = "font-family:Lobster; font-style:italic; font-size: 40px">Add New Order</p></h2>
+  <img src="https://i.ibb.co/S0Rvh33/webpage.png" alt="webpage" border="0">
 <form action="insert.php" method="post">
+<p style = "font-family:candara;">	
     Name of Item: <input type="text" name = "name" /><br/>
-    Website/Application bought from: <input type="text" name = "website" /><br/>
+    Website/Application bought from: <input type="text" name = "website" /><br/><br>
+    Category: <select id = "category" name ="category">
+      <option value = "beauty and personal care">Beauty and Personal Care</option>
+      <option value = "Mobile and Gadgets">Mobile and Gadgets</option>
+      <option value = "Home and Living">Home and Living</option>
+      <option value = "Food and Beverage">Food and Beverage</option>
+      <option value = "Bags">Bags</option>
+      <option value = "Jewellery and Accessories">Jewellery and Accessories</option>
+      <option value = "Shoes">Shoes</option>
+      <option value = "Clothings">Clothings</option>
+      <option value = "Miscellaneous">Miscellaneous</option>
+    </select><br/>
+    <br/>
     Delivery Date: <input type="date" name = "delivery" /><br/>
+    <br/>
     <input type="submit" />
 </form>
 

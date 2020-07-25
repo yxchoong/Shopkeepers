@@ -8,7 +8,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
 </head>
 
 <style>
@@ -46,7 +47,7 @@ body {
 }
 
 .header {
-  background-color: #F1F1F1;
+  background-color:#F1F1F1 ;
   text-align: center;
   padding: 70px;
   color:#FC94AF;
@@ -55,9 +56,9 @@ body {
 }
 
 .content {
-  background-color: #F1F1F1;
+  background-color:#F1F1F1;
   padding: 10px;
-  height: 600px;
+  height: 700px;
   text-align: center;
 }
 
@@ -72,7 +73,7 @@ body {
 </div>
 
 <div class="content">
-  <h1>We are the Shopkeepers!</h1>
+	<h1><p style = "font-family:Lobster; font-style:italic; font-size: 40px">Hello, we are the Shopkeepers!</p></h1>
   <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" /></a>
   <p> Welcome! <br><br>
   We are Shopkeepers from SoC and we aim to provide a platform for you to keep track of your online purchases. <br><br>

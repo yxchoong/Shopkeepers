@@ -17,8 +17,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
 </head>
+
+<STYLE>A {text-decoration: none;} </STYLE>
 
 <style>
 body {
@@ -108,6 +112,48 @@ body {
   text-align: center;
 }
 
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #ffb5c8;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 13px;
+  padding: 25px;
+  width: 225px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-family: Merriweather;
+  text-color: black;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 </style>
 
 <body>
@@ -129,15 +175,14 @@ body {
 <div class = "content">
 
     <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to Shopkeepers!</h1>
+	    <h1><p style = "font-family:Lobster; font-size: 35px; font-style:italic;">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to Shopkeepers!</p></h1>
     </div>
 
-  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:250px;height:250px;"/></a><br><br
-    <p>
-        <a href="current.php" class="btn btn-warning">View Current Orders</a>
-
-
-        <a href="past.php" class="btn btn-danger">View Past Orders</a>
+    <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:300px;height:250px;"/></a><br><br>
+    <p style="color: black;">
+    <button class="button" style="vertical-align:middle"><span><a href="current.php" style="color:#00354f">View Current Orders</a></span></button>
+	    
+     <button class="button" style="vertical-align:middle"><span><a href="past.php" style="color:#00354f">View Past Orders</a></span></button>
     </p>
 </body>
 </html>

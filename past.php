@@ -7,8 +7,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
-</head>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'></head>
 
 <style>
 body {
@@ -88,13 +88,13 @@ body {
   padding: 70px;
   color:#FC94AF;
   font-size: 50px;
-  font-family: Pacifico;
+  font-family: Lobster;
 }
 
 .content {
   background-color: #F1F1F1;
   padding: 10px;
-  height: 600px;
+  height: 700px;
   text-align: center;
 }
 
@@ -134,16 +134,16 @@ tr:nth-child(even) {
 
 
 <div class="content">
-  <h2>These are your past orders.</h2>
-  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:250px;height:250px" /></a>
-<p>              </p>
+	<h2><p style = "font-family:Lobster; font-style:italic; font-size: 40px">Past Orders</p></h2>
+	<img src="https://iili.io/dx7QVa.md.png" alt="dx7QVa.md.png" border="0" height="220px" width="290px">
   <table style="float: center">
     <tr>
-      <th colspan="3">Past Orders</th>
+      <th colspan="4">Past Orders</th>
     </tr>
     <tr>
       <th>Name of Item</th>
       <th>Website/Application</th>
+      <th>Category</th>
       <th>Delivered On</th>
     </tr>
 
@@ -168,7 +168,7 @@ if(isset($_POST['but_delete'])){
 
   if(isset($_POST['delete'])){
     foreach($_POST['delete'] as $deleteid){
-   $sql = "INSERT INTO old (username, name, website, delivery) SELECT username, name, website, delivery from new WHERE name='$deleteid' and username = '".$_SESSION["username"]."' ";
+   $sql = "INSERT INTO old (username, name, website, category, delivery) SELECT username, name, website, category, delivery from new WHERE name='$deleteid' and username = '".$_SESSION["username"]."' ";
     }
   }
 mysqli_query($conn, $sql);
@@ -189,12 +189,12 @@ mysqli_query($conn, $delete);
 }
 }
 
-$sql = "SELECT name, website, delivery FROM old WHERE username = '".$_SESSION["username"]."' ORDER BY delivery";
+$sql = "SELECT name, website, category, delivery FROM old WHERE username = '".$_SESSION["username"]."' ORDER BY delivery";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
-echo "<tr><td>" . $row["name"]. "</td><td>" . $row["website"] . "</td><td>"
+echo "<tr><td>" . $row["name"]. "</td><td>" . $row["website"] . "</td><td>" . $row["category"] . "</td><td>"
 . $row["delivery"]. "</td><tr>" ;
 }
 echo "</table>";

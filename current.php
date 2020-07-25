@@ -6,7 +6,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
 </head>
 
 <style>
@@ -93,7 +94,7 @@ body {
 .content {
   background-color: #F1F1F1;
   padding: 10px;
-  height: 600px;
+  height: 700px;
   text-align: center;
 }
 
@@ -133,18 +134,19 @@ tr:nth-child(even) {
 
 
 <div class="content">
-  <h2>These are your current orders.</h2>
-  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:250px;height:250px" /></a>
-<p><a href="add new.php" style="color:#B618A1 "> Add new order!</a></p>
+	<h2><p style = "font-family:Lobster; font-style:italic; font-size: 40px">Current Orders</p></h2>
+  <img src="https://i.ibb.co/f8M0T6v/laptop.png" alt="laptop" border="0" height="180px" width="180px">
+<p><a href="add new.php" style="color:#B618A1 ">  Add new order!</a></p>
 
 <form action="past.php" method="post">
   <table style="float: center">
    <tr>
-      <th colspan="5">Current Orders</th>
+      <th colspan="6">Current Orders</th>
     </tr>
     <tr>
       <th>Name of Item</th>
       <th>Website/Application</th>
+      <th>Category</th>
       <th>Delivery Date</th>
       <th>Delivered?</th>
       <th> </th>
@@ -169,8 +171,9 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT name, website, delivery FROM new WHERE username = '".$_SESSION["username"]."' ORDER BY delivery";
+$sql = "SELECT name, website, category, delivery FROM new WHERE username = '".$_SESSION["username"]."' ORDER BY delivery";
 $result = $conn->query($sql);
+
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
@@ -178,6 +181,7 @@ while($row = $result->fetch_assoc()) {
   <tr>
   <td><?php echo $row["name"]; ?> </td>
   <td><?php echo $row["website"]; ?> </td>
+  <td><?php echo $row["category"]; ?> </td>
   <td><?php echo $row["delivery"]; ?> </td>
   <td><input type='checkbox' name='delete[]' value=<?php echo $row['name']; ?>> </td>
   <td> <a href="delete.php?id=<?php echo $row['name']; ?>">Delete</a></td>
@@ -190,6 +194,7 @@ echo "</table>";
 $conn->close();
 ?>
 </table>
+</br>
 <input type="submit" name='but_delete' value="Update Orders" />
 </form>
 

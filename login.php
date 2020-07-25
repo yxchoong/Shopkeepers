@@ -96,7 +96,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
 </head>
 
 <style>
@@ -161,8 +162,8 @@ body {
 
 
 	<div class="content">
-  <h2>Log In Page</h2>
-  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:250px;height:250px;"/></a><br><br>
+	<h2><p style = "font-family:Lobster; font-style:italic; font-size: 40px">Log In Page</p></h2>
+  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:300px;height:250px;"/></a><br><br>
     <div class="wrapper">
         <p>Please fill in your credentials to login.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

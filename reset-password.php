@@ -78,8 +78,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
-</head>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'></head>
 
 <style>
 body {
@@ -189,8 +189,8 @@ body {
 
 
 	<div class="content">
-  <h2>Reset Password</h2>
-  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:250px;height:250px;"/></a><br><br>
+  <h2><p style = "font-family:Lobster; font-style:italic; font-size: 40px">Reset Password</p></h2>
+  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:300px;height:250px;"/></a><br><br>
     <div class="wrapper">
 
         <p>Please fill out this form to reset your password.</p>
