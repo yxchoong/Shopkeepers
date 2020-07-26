@@ -193,7 +193,7 @@ body {
   <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:300px;height:250px;"/></a><br><br>
     <div class="wrapper">
 
-        <p>Please fill out this form to reset your password.</p>
+        <p><strong>Please fill out this form to reset your password.</strong></p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
             <div class="form-group <?php echo (!empty($new_password_err)) ? 'has-error' : ''; ?>">
                 <label>New Password</label>

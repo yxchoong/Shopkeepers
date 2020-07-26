@@ -157,6 +157,9 @@ body {
 </style>
 
 <body>
+	<script> 
+		alert("Please remember to update your order status!");  // display string message
+	</script> 
 
 <div class="navbar">
   <div class="dropdown">

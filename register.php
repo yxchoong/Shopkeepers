@@ -120,24 +120,68 @@ body {
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+.navbar {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.navbar a {
   float: right;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.dropdown {
+  float: right;
+  overflow: hidden;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 5px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #FC94AF;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FC94AF;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: #FC94AF;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar a.active {
   background-color: #FC94AF;
   color: black;
 }
@@ -162,18 +206,25 @@ body {
 
 <body>
 
-<div class="topnav">
-  <a href="login.php" class="active">Account</a>
-  <a href="about us.php">About Us</a>
-  <a href="main.php">Home</a>
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn" class="active"><a href="welcome.php">Account 
+      <i class="fa fa-caret-down"></i>
+    </a></button>
+    <div class="dropdown-content">
+      <a href="reset-password.php">Reset Password</a>
+      <a href="logout.php">Log out</a>
+    </div>
+  </div> 
+<a href="about us.php">About Us</a>
+<a href="main.php">Home</a>
 </div>
-
 
 	<div class="content">
   <h2><p style = "font-family:Lobster; font-style:italic; font-size: 40px">Sign Up Page</p></h2>
   <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:300px;height:250px;"/></a><br><br>
     <div class="wrapper">
-        <p>Please fill this form to create an account.</p>
+        <p><strong>Please fill this form to create an account.</strong></p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
@@ -199,7 +250,7 @@ body {
                 <input type="submit" class="btn btn-primary" value="Submit">
                 <input type="reset" class="btn btn-default" value="Reset">
             </div>
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+            <p><strong>Already have an account? <a href="login.php">Login here</strong></a>.</p>
         </form>
     </div>    
 </body>

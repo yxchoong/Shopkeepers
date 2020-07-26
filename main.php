@@ -16,32 +16,76 @@
 body {
   height: 100%;
   font-family: "Inconsolata", sans-serif;
+  font-size : 20px;
 }
-
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+.navbar {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.navbar a {
   float: right;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.dropdown {
+  float: right;
+  overflow: hidden;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 5px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #FC94AF;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FC94AF;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: #FC94AF;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar a.active {
   background-color: #FC94AF;
   color: black;
 }
@@ -66,19 +110,30 @@ body {
 
 <body>
 
-<div class="topnav">
-  <a href="login.php">Account</a>
-  <a href="about us.php">About Us</a>
-  <a class="active" href="#home">Home</a>
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn" class="active"><a href="welcome.php">Account 
+      <i class="fa fa-caret-down"></i>
+    </a></button>
+    <div class="dropdown-content">
+      <a href="reset-password.php">Reset Password</a>
+      <a href="logout.php">Log out</a>
+    </div>
+  </div> 
+<a href="about us.php">About Us</a>
+<a href="main.php" class="active">Home</a>
 </div>
 
 <div class="content">
 	<h1><p style = "font-family:Lobster; font-style:italic; font-size: 40px">Hello, we are the Shopkeepers!</p></h1>
-  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" /></a>
-  <p> Welcome! <br><br>
-  We are Shopkeepers from SoC and we aim to provide a platform for you to keep track of your online purchases. <br><br>
+  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" height="280px" width="300px"/></a>
+  <p> Welcome to Shopkeepers, the one-stop website to keep track of your online purchases.</strong>
+  <br></br>
 
   With Shopkeepers, you will never have troubles remembering what you bought online or whether they have been delivered!</p>
+
+  </br> 
+  <p> <strong>Should you have any enquiries, <a href = "mailto: shopkeepers2020@gmail.com">send an email</a> to us!</strong></p>
 </div>
   
 </body>

@@ -114,6 +114,13 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+.topleft {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  font-size: 18px;
+}
+
 </style>
 
 <body>
@@ -135,9 +142,10 @@ tr:nth-child(even) {
 
 
 <div class="content">
+<div class = "topleft"><strong><a href = "past.php" style="color:#F82DA3"> View Past Orders </a></strong> </div> 
 	<h2><p style = "font-family:Lobster; font-style:italic; font-size: 40px">Current Orders</p></h2>
 	<img src="https://i.ibb.co/f8M0T6v/laptop.png" alt="laptop" border="0" height="180px" width="180px">
-<p><a href="add new.php" style="color:#B618A1 "> Add new order!</a></p>
+<p><a href="add new.php" style="color:#B618A1 "><strong> Add new order!</strong></a></p>
 
 <form action="past.php" method="post">
   <table style="float: center">

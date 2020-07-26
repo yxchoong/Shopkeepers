@@ -95,7 +95,7 @@ body {
 .content {
   background-color: #F1F1F1;
   padding: 10px;
-  height: 700px;
+  height: 2100px;
   text-align: center;
 }
 
@@ -119,18 +119,25 @@ table {
       <a href="logout.php">Log out</a>
     </div>
   </div> 
-<a href="about us.php">About Us</a>
+<a href="about us.php"class="active">About Us</a>
 <a href="main.php">Home</a>
 </div>
 
 <div class="content">
   <h1><p style = "font-family:Lobster; font-style:italic; font-size: 40px">About Us</p></h1>
-  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" /></a>
-  <p>Welcome to Shopkeepers, the one-stop website to keep all your online purchases history!<br><br>
-	How to use the website with 3 simple steps:<br><br>
-1. Create an account with us<br>
-2. Input your online order and its estimated delivery date<br>
-3. Check the delivered checkbox once your item has been delivered!<br><br>
+  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" height="240px" width="260px"/></a>
+  <p><h3>The following will teach you how to use the website with these simple steps:</h3><br><br>
+	1. Create an account with us!<br><br>
+	<a href="https://freeimage.host/i/dIitJn"><img src="https://iili.io/dIitJn.md.png" alt="dIitJn.md.png" border="0"></a><br><br><br>
+	2. Input your online order and its estimated delivery date when you click "Add New Order" in your current order page.<br><br>
+<a href="https://freeimage.host/i/dIikUF"><img src="https://iili.io/dIikUF.md.png" alt="dIikUF.md.png" border="0"></a><br><br><br>
+3. When your order has been added, you will be brought back to the current order page.<br><br>
+<a href="https://freeimage.host/i/dIi4xR"><img src="https://iili.io/dIi4xR.md.png" alt="dIi4xR.md.png" border="0"></a><br><br><br>
+
+4. Check the delivered checkbox and press "Update Orders" once your item has been delivered.<br><br>
+<a href="https://freeimage.host/i/dIi6Vp"><img src="https://iili.io/dIi6Vp.md.png" alt="dIi6Vp.md.png" border="0"></a><br><br><br>
+5. The delivered items will then be reflected on the past orders page along with the other items delivered.<br><br>
+<a href="https://freeimage.host/i/dIiLlt"><img src="https://iili.io/dIiLlt.md.png" alt="dIiLlt.md.png" border="0"></a><br><br><br>
 
 </p>
 </div>
