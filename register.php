@@ -222,7 +222,7 @@ body {
 
 	<div class="content">
   <h2><p style = "font-family:Lobster; font-style:italic; font-size: 40px">Sign Up Page</p></h2>
-  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:300px;height:250px;"/></a><br><br>
+  <img src="https://i.ibb.co/LkXRX4g/shop.png" alt="shop" border="0" style="width:250px;height:200px;"/></a><br><br>
     <div class="wrapper">
         <p><strong>Please fill this form to create an account.</strong></p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

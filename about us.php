@@ -110,17 +110,10 @@ table {
 <body>
 
 <div class="navbar">
-  <div class="dropdown">
-    <button class="dropbtn" class="active"><a href="welcome.php">Account 
-      <i class="fa fa-caret-down"></i>
-    </a></button>
-    <div class="dropdown-content">
-      <a href="reset-password.php">Reset Password</a>
-      <a href="logout.php">Log out</a>
-    </div>
-  </div> 
-<a href="about us.php"class="active">About Us</a>
-<a href="main.php">Home</a>
+  <a href="welcome.php">Account </a>
+    
+<a href="about us.php" class="active">About Us</a>
+<a href="main.php" >Home</a>
 </div>
 
 <div class="content">
