@@ -29,7 +29,7 @@ e. Resetting of password
 ## Frontend
 
 ### User account:
-Creating user account
+## Creating user account
 Username and passwoord validation
 Password must be at least 6 characters
 Password and Confirm Password must match
