@@ -13,17 +13,6 @@ We hope to provide a webpage called the Shopkeepers where users can **keep track
 There are instances when people tend to forget what they bought online, and whether or not they have been delivered.  Hence, the main need that we hope to fulfil is to allow online shoppers to be able to keep track of everything purchased online.  We also want the web page to be user friendly so that it can be easily managed by all.  
 
 
-## Features and Timeline
-Key Features:
-1. User Account 
- a. Creating user account
-b. Username, email and password validation
-- Password must be at least 6 characters
-- Password and Confirm Password must match
-c. Login
-d. Logout
-e. Resetting of password
-
 ## Core Features
 
 ## Frontend
@@ -37,6 +26,7 @@ Valid Username used
 Sign in 
 Sign out
 Resetting password
+
 
 ## Main Features: 
 ### Item Input
