@@ -16,7 +16,7 @@ There are instances when people tend to forget what they bought online, and whet
 ## Features and Timeline
 Key Features:
 1. User Account 
-a. Creating user account
+ a. Creating user account
 b. Username, email and password validation
 - Password must be at least 6 characters
 - Password and Confirm Password must match
@@ -64,11 +64,9 @@ If the status of the item is not updated (i.e to ‘delivered’) on the estimat
 can be used to modify website content and make it behave in different ways in response to a user's actions.
 ### 2. Database (mysql)
 used to search, sort, filter and present information based upon web requests from users.
-### 3. Meteor
-makes it easy to build robust, secure real-time web applications, handling everything from the browser app to the server or database.
-### 4. HTML 
+### 3. HTML 
 allows us to create and structure sections, paragraphs, headings, links, and block quotes for our webpage.
-### 5. CSS 
+### 4. CSS 
 allows us to describe the presentation of Web pages, including colors, layout, and fonts. 
 
 
